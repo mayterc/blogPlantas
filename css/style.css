@@ -76,6 +76,9 @@ img{
     background: radial-gradient(circle, rgba(80,86,50,0.4682247899159664) 9%, rgba(80,86,50,0.6587009803921569) 78%);
     height: 40rem;
 }
+.logo_nombre{
+    font-size: 2.5rem;
+}
 @media(min-width: 768px){
     .header{
         height:  44rem;
@@ -102,6 +105,14 @@ img{
 }
 .barra{
     padding-top: 4rem;
+}
+.navegacion{
+    display: flex;
+    justify-content: center;
+    gap:1em;
+}
+.navegacion_enlace{
+    font-size: 1rem;
 }
 @media(min-width: 768px ) {
     .barra{
@@ -173,6 +184,7 @@ img{
      .boton{
          display: inline-block;
      }
+
      
  }
  .boton:hover{
@@ -253,10 +265,8 @@ img{
 
 .contacto-bg{
     background-image: url(../img/contacto.jpg);
-    height: 50rem;
-    
+    height: 40rem;
     background-size: cover;
-  
     background-repeat: no-repeat;
     margin: auto;
     
@@ -268,11 +278,14 @@ img{
     margin-bottom: 5em;
 }
 .formulario{
- width: 70%;
+    width: 70%;
 }
 .contacto-bg{
 width: 110vh;
 background-position: center;
+}
+.enviar{
+    margin-left: 13em;
 }
 }
 
@@ -282,7 +295,7 @@ background-position: center;
 }
 
 .enviar{
-    margin-left: 13em;
+    margin-left: 7em;
 }
 
 .campo{
