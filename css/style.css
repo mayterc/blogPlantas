@@ -6,6 +6,8 @@
     --negro: #000;
     --gris: #e1e1e1;
     --verde: #505632;
+    --error: #B84848;
+    --enviado: #2d572c;
 
 
 }
@@ -65,7 +67,7 @@ img{
 }
 /*Header*/
 .header{
-    background-image: url(../img/banner.webp);
+    background-image: url("../img/banner.webp");
     height:40rem;
     background-size: cover; /*adapta el tamaño segun los pixeles todo */
     background-repeat: no-repeat;/*no repetir la imagen*/   
@@ -81,11 +83,11 @@ img{
 }
 @media(min-width: 768px){
     .header{
-        height:  44rem;
+        height:  50rem;
         background-position: center -18em;
     }
 .colorFondo{
-    height: 44rem;
+    height: 50rem;
 }
 
 }
@@ -262,14 +264,26 @@ img{
  }
 
 /*CONTACTO*/
+.enviado, .error{
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.error{
+    color: var(--error);
+}
+
+.enviado{
+    color: var(--enviado);
+}
 
 .contacto-bg{
     background-image: url(../img/contacto.jpg);
-    height: 40rem;
+    width: 6    0vh;
+    height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
-    
+    background-position: left ;
 }
 
 @media(min-width: 768px){
@@ -295,23 +309,55 @@ background-position: center;
 }
 
 .enviar{
-    margin-left: 7em;
+    margin-left: 5em;
 }
 
-.campo{
+
+@media(min-width: 768px){
+    .campo{
 display: flex;
 margin-bottom: 2rem;
 }
 
 .campo_label{
-flex: 0 0 9rem;
-text-align: right;
-padding-right: 2rem;
+/* flex: 0 5rem; */
+text-align: left;
+/* padding-right: 2rem; */
+
 }
 
 .campo_field{
 flex: 1;
 border: 1px solid;
+}
+.campo_field--textarea{
+height: 1000rem;
+}
+
+.contacto-imagen{
+    display: flex;
+    justify-content: center;
+    height: 25em;
+    
+}
+}
+
+.campo{
+display: flex;
+flex-direction: column;
+margin-bottom: 1rem;
+}
+
+.campo_label{
+/* flex: 0 0 9rem; */
+/* text-align: right; */
+padding-right: 2rem;
+}
+
+.campo_field{
+    padding: 0.5rem;
+/* flex: 1; */
+/* border: 1px solid; */
 }
 .campo_field--textarea{
 height: 20rem;

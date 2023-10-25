@@ -3,7 +3,7 @@
 //para seleccionar elemntos de la página web, se necesita querySelector
 // querySelector solo almancena 0 o 1 elemento
 const heading = document.querySelector("h2"); // almacenamos la seleecion de la etiqueta
-// Para manipular la etiqueta, se hace de la sigueitne menra
+// Para manipular la etiqueta, se hace de la siguiente manera
 heading.textContent = "Blog de plantas con consejos y cursos"; // Cambiamos el contenido de la etiqueta, se puede ver en la pagina
 heading.classList.add("nuevaClase"); //agregarle una nueva clase a la etiqueta
 console.log(heading); //muestra en consola la eqitueta si esta mal la etiqueta  mostrara null
@@ -29,23 +29,23 @@ navegacion.append(nuevoEnlace);
 
 // EVENTOS
 //Cada vez que se hace un 
-console.log(1);
-window.addEventListener('load', function () {
-    console.log(2);
-})
+// console.log(1);
+// window.addEventListener('load', function () {
+//     console.log(2);
+// })
 
-window.onload = function () {
-    console.log(3)
-}
-window.addEventListener('DOMContentLoaded', function () {
-    console.log(4);
-})
+// window.onload = function () {
+//     console.log(3)
+// }
+// window.addEventListener('DOMContentLoaded', function () {
+//     console.log(4);
+// })
 
-console.log(5);
+// console.log(5);
 
-window.onscroll = function () {
-    console.log('scrolling...');
-}
+// window.onscroll = function () {
+//     console.log('scrolling...');
+// }
 
 //Seleccionar elementos y asociarles un evento
 //const btnEnviar = document.querySelector(".boton-primario");
@@ -78,7 +78,7 @@ function leerTexto(e) {
 
 //Enviar formulario
 
-const formulario = querySelector('.formulario');
+const formulario = document.querySelector('.formulario');
 
 formulario.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -86,10 +86,47 @@ formulario.addEventListener('submit', function (event) {
 
     //validar formulario
     const { nombre, email, mensaje } = datos; //aplicar destruction
+    // const error = document.createElement('p');
+
     
     if (nombre === '' || email === '' || mensaje === '' ){
-        console.log('DATOS VACIOS');
+        mostrarError('Lo siento, todos los campos son obligatorios');
         return;
-}
-console.log('Enviando Formulario');
+    } 
+        mensajeEnviado('Tu mensaje a sido enviado correctamente');
+
 });
+
+
+//Funcion para mostra error en pantalla
+function mostrarError(mensaje) {
+    //crear elementos html
+    const error = document.createElement('P');
+    // const icono = document.createElement('')
+    error.textContent = mensaje; //contenido del parrafo
+    error.classList.add('error'); //crear clase al parrafo
+ 
+    formulario.appendChild(error); //insertar el elemento al final
+
+    //Desaparecer el parrafo despues de 5 seg
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
+}
+
+function mensajeEnviado(mensajeEnvi){
+    const enviado = document.createElement('P');
+    enviado.textContent = mensajeEnvi;
+    enviado.classList.add('enviado');
+
+    formulario.appendChild(enviado);
+
+    setTimeout(() => {
+        enviado.remove();
+    },4000)
+
+}
+
+//Refactoring: Hacer un codigo sucio, pero que funcione, ya después hacerlo más corto, entendible y limpio
+// Las funciones mensajeEnviado y erro  son practicamente lo misnmo, asi que se acorta con lo siguiente
+
