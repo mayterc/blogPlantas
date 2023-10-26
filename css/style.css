@@ -78,6 +78,10 @@ img{
     background: radial-gradient(circle, rgba(80,86,50,0.4682247899159664) 9%, rgba(80,86,50,0.6587009803921569) 78%);
     height: 40rem;
 }
+.iconoLogo{
+height: 5rem;
+margin-top: -1.5rem;
+}
 .logo_nombre{
     font-size: 2.5rem;
 }
@@ -90,6 +94,9 @@ img{
     height: 50rem;
 }
 
+.iconoLogo{
+    height: 5rem;
+}
 }
 
 .header-nosotros{
@@ -125,6 +132,7 @@ img{
 }
 .logo{
     color: var(--blanco);
+    display: flex;
 }
 .logo_nombre{
     font-weight: 400;
@@ -305,7 +313,7 @@ background-position: center;
 
 .formulario{
     background-color: var(--blanco);
-    padding: 5rem;
+    padding: 2rem;
 }
 
 .enviar{
@@ -327,8 +335,8 @@ text-align: left;
 }
 
 .campo_field{
-flex: 1;
-border: 1px solid;
+/* flex: 110; */
+border: 2px solid;
 }
 .campo_field--textarea{
 height: 1000rem;

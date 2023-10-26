@@ -15,17 +15,17 @@ console.log(enlaces[1]);
 enlaces.forEach(enlace => console.log(enlace)); //Mostrar todos los enlaces
 
 //Generar un nuevo enlace usando JS
-const nuevoEnlace = document.createElement('A');
+// const nuevoEnlace = document.createElement('A');
 //agregar href
-nuevoEnlace.href = 'nuevo-enlace.html';
+// nuevoEnlace.href = 'nuevo-enlace.html';
 //Agregar el texto
-nuevoEnlace.textContent = 'Tienda virtual';
+// nuevoEnlace.textContent = 'Tienda virtual';
 
 //A que clase del html se queire agregar
-nuevoEnlace.classList.add('navegacion_enlace');
+// nuevoEnlace.classList.add('navegacion_enlace');
 //Agregarlo al documento html
-const navegacion = document.querySelector(".navegacion");
-navegacion.append(nuevoEnlace);
+// const navegacion = document.querySelector(".navegacion");
+// navegacion.append(nuevoEnlace);
 
 // EVENTOS
 //Cada vez que se hace un 
@@ -103,6 +103,7 @@ function mostrarError(mensaje) {
     //crear elementos html
     const error = document.createElement('P');
     // const icono = document.createElement('')
+    error.createElement
     error.textContent = mensaje; //contenido del parrafo
     error.classList.add('error'); //crear clase al parrafo
  
